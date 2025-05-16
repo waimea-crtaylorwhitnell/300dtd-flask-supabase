@@ -1,0 +1,21 @@
+section#hero {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pico-primary-background);
+}
+
+#things {
+    display: flex;
+    gap: 1rem;
+}
+
+#things article {
+    width: 17rem;
+    background-color: var(--pico-primary-background);
+}
+
+#things p {
+    height: 7rem;
+}
