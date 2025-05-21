@@ -13,9 +13,8 @@ section#hero {
 
 #things article {
     width: 17rem;
-    background-color: var(--pico-primary-background);
 }
 
-#things p {
+#things article p {
     height: 7rem;
 }

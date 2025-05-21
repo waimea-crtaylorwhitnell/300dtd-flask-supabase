@@ -1,0 +1,24 @@
+{% extends 'pages/base.jinja' %}
+
+{% block title %} 
+    Flask Demo Thing
+{% endblock %}
+
+{% block content %}
+    <section id="hero">
+        <h1>Flask DB</h1>
+    </section>
+
+    <section id="things">
+        <article>
+            <header>
+                {{ thing["name"] }}                
+            </header>
+            <p>{{ thing["description"]}} <br>
+            Cost ${{ thing["cost"] }}</p> 
+            <footer>
+                Delete    
+            </footer>
+        </article>
+    </section>
+{% endblock %}

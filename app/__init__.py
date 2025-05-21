@@ -16,12 +16,19 @@ app = Flask(__name__)
 # Home route
 @app.get("/")
 def home():
-    response = supabase.table("things").select().execute()
+    response = supabase.table("things").select().order("name").execute()
     records = response.data
     
     print(response)
 
     return render_template("pages/home.jinja", things=records)
+
+# 
+@app.get("/thing/<int:id>")
+def showThing(id):
+    response = supabase.table("things").select().eq("id", id).single().execute()
+    record = response.data
+    return render_template("pages/thing.jinja", thing=record)
 
 # Error route
 @app.errorhandler(404)
